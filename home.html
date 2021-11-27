@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+     figcaption {
+      color:black;
+      font-style: italic;
+      padding: 5px;
+      text-align: center;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 20%;
+      padding: 20px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
 <img src="cart.jpg" style="float:right;width:50px;height:48px;"/>
 <style>
    body{
@@ -46,29 +70,36 @@
  </ul>
  <br>
 
- <div class="img-with-text">
-<img src="pendrive.jpg"  width="200px" height="180px"/>
 
-  <img src="laptop1.jpg" width="200px" height="180px"  />
- <img src="airpod.jpg" width="200px" height="180px"/>
- <img src="mouse.jpg" width="200px" height="180px" />
- 
-  <img src="exhard.jpg" style="float:right;width:200px;height:180px;"/>
+ <div class="row">
+  <div class="column">
+    <img src="pendrive.jpg" width="200px" height="180px" />
+    <figcaption>Pendrive</figcaption>
+  </div>
+  <div class="column">
+    <img src="laptop1.jpg"  width="200px" height="180px" />
+    <figcaption>Laptop</figcaption>
+  </div>
+  <div class="column">
+    <img src="airpod.jpg"  width="200px" height="180px" />
+    <figcaption>Airpod</figcaption>
+  </div>
+  <div class="column">
+    <img src="exhard.jpg"  width="200px" height="180px" />
+    <figcaption>External HardDisk</figcaption>
+  </div>
+  <div class="column">
+    <img src="mouse.jpg"  width="200px" height="180px" />
+    <figcaption>Mouse</figcaption>
+  </div>
+<div class="column">
+<img src="mb_img_25.jpg" width="200px" height="180px"/>
+<figcaption>Iphone</figcaption>
 </div>
-<div class="img-with-text">
-  <figure>
-  <img src="mb_img_25.jpg" width="200px" height="180px"/>
-  <figcaption>IPhone 13</figcaption>
-  <button type="button"> <img src="buybutton.png" height="px" width="100px"/>
-  </button>
-  <style>
-    figcaption {
-      color:black;
-      font-style: italic;
-      padding: 2px;
-    }
-  </style>
-  </figure>
+<div class="column">
+  <img src="backcover.jpg" width="200px" height="180px"/>
+  <figcaption>Back Cover</figcaption>
+  </div>
 </div>
  
    </body>

@@ -8,7 +8,7 @@
             div {
   border: 10px solid black;
   background-color: ghostwhite;
-  padding-top: 100px;
+  padding-top: 20px;
   padding-right: 30px;
   padding-bottom: 200px;
   padding-left: 30px;
@@ -55,6 +55,18 @@
      font-size: large;
      text-decoration: none;
    }
+   .button {
+  background-color:purple;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 
    </style>
@@ -71,26 +83,26 @@
         <li><a href="#about"><b>About us</b></a></li>
         <li><a href="predict.html"><b>Predict</b></a></li>
       </ul>
-      <br>
+    <br>
     <div class="login">
        <h1>Predict User demand</h1>
    
         <!-- Main Input For Receiving Query to our ML -->
        <form action="{{ url_for('predict')}}"method="post">
-           <input type="text" name="experience" placeholder="Experience" required="required" />
-           <input type="text" name="test_score" placeholder="Test Score" required="required" />
-           <input type="text" name="interview_score" placeholder="Interview Score" required="required" />
-           <input type="text" name="experience" placeholder="Experience" required="required" />
-           <input type="text" name="test_score" placeholder="Test Score" required="required" />
-           <input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+           <input type="text" name="experience" placeholder="Administrative" required="required" />
+           <input type="text" name="test_score" placeholder="Administrative_Duration" required="required" />
+           <input type="text" name="interview_score" placeholder="Informational" required="required" />
+           <input type="text" name="experience" placeholder="Informational_Duration" required="required" />
+           <input type="text" name="test_score" placeholder="ProductRelated" required="required" />
+           <input type="text" name="interview_score" placeholder="ProductRelated_Duration" required="required" />
            <br>
            <br>
-           <input type="text" name="experience" placeholder="Experience" required="required" />
-           <input type="text" name="test_score" placeholder="Test Score" required="required" />
-           <input type="text" name="interview_score" placeholder="Interview Score" required="required" />
-           <input type="text" name="experience" placeholder="Experience" required="required" />
-           <input type="text" name="test_score" placeholder="Test Score" required="required" />
-           <input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+           <input type="text" name="experience" placeholder="BounceRates" required="required" />
+           <input type="text" name="test_score" placeholder="ExitRates" required="required" />
+           <input type="text" name="interview_score" placeholder="PageValues" required="required" />
+           <input type="text" name="experience" placeholder="SpecialDay" required="required" />
+           <input type="text" name="test_score" placeholder="Month" required="required" />
+           <input type="text" name="interview_score" placeholder="OperatingSystems" required="required" />
    <br>
    <br>
 
@@ -103,7 +115,9 @@
            
    <br>
    <br>
-           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+         <button class="button">Predict</button>
+
+           
        </form>
        <br>
    <br>

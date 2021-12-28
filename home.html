@@ -98,7 +98,11 @@ body {
       <br>
      <p><b>₹250</b></p>
     <button type="submit" class="btn btn-success" button onclick="document.location='cart.html' ">Buy</button>
-    
+    <form action="/" method="POST">
+      {% csrf_token %}
+      <input type="text" name="product" value='{{product.id}}'>
+      <input type="submit" class="float-right btn btn-light border btn-sm" value="Add To Cart">
+    </form>
   </center>
   </div>
   <div class="column">

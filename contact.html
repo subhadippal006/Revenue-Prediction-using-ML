@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1><span class="badge badge-secondary">CONTACT US</span></h1>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+       figcaption {
+        color:black;
+        font-style: italic;
+        padding: 5px;
+        text-align: center;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      
+      .column {
+        float: left;
+        width: 20%;
+        padding: 20px;
+      }
+      
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      </style>
+      
+      <a href="cart.html"><img src="cart.jpg" style="float:right;width:50px;height:54.5px;"/></a>
+  <style>
+    
+     ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow:hidden;
+       background-color: #FFD700;
+     }
+     
+     li {
+       float: left;
+     }
+     
+     li a {
+       display: block;
+       color: black;
+       text-align: center;
+       padding: 14px 16px;
+       font-size: large;
+       text-decoration: none;
+     }
+     
+     li a:hover {
+       background-color:ghostwhite;
+     }
+     .checked {
+    color: orange;
+  }
+  
+     </style>
+     
+    
+     </head>
+  
+  <body>
+     
+  <ul>
+     <li><a class="active" href="home.html"><b>Home</b></a></li>
+     <li><a href="recomendation.html"><b>Recomendation</b></a></li>
+     <li><a href="contact.html"><b>Contact us</b></a></li>
+     <li><a href="#about"><b>About us</b></a></li>
+     <li><a href="predict.html"><b>Predict</b></a></li>
+   </ul>
+   <br>
+  <div>
+<form action="registercontactus.php" method='post'>
+  <div class="container">
+  <p>LET US KNOW YOUR ISSUE</p>
+ <hr>
+<label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" class="form-control" id="name" required>
+<label for="phnumber"><b>Phone number</b></label>
+    <input type="text" placeholder="Enter phone number" name="phnumber" class="form-control" id="phnumber" required>
+<label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter email id" name="email" class="form-control" id="email" required>
+<label for="subject"><b>Subject</b></label>
+    <input type="text" placeholder="Enter description" name="subject" class="form-control" id="subject"  required>
+	</hr>
+	<br>
+<button type="submit" class="btn btn-success">Send</button>
+</div>
+</form>
+</body>
+</html>

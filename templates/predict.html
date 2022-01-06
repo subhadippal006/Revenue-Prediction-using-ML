@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+               background-color:#800080;
+            } 
+            div {
+  border: 10px solid black;
+  background-color: ghostwhite;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 200px;
+  padding-left: 30px;
+}
+ figcaption {
+      color:black;
+      font-style: italic;
+      padding: 5px;
+      text-align: center;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 20%;
+      padding: 20px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+   ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow:hidden;
+     background-color: #FFD700;
+   }
+   
+   li {
+     float: left;
+   }
+   
+   li a {
+     display: block;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     font-size: large;
+     text-decoration: none;
+   }
+   .button {
+  background-color:purple;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+   </style>
+
+
+    </head>
+   
+
+<body>
+    <ul>
+        <li><a class="active" href="home.html"><b>Home</b></a></li>
+        <li><a href="recomendation.html"><b>Recomendation</b></a></li>
+        <li><a href="contact.html"><b>Contact us</b></a></li>
+        <li><a href="about.html"><b>About us</b></a></li>
+        <li><a href="predict.html"><b>Predict</b></a></li>
+      </ul>
+    <br>
+    <div class="login">
+       <h1>Predict User demand</h1>
+   
+        
+       <form action="{{ url_for('predict')}}"method="post">
+           <input type="text" name="Administrative" placeholder="Administrative" required="required" />
+           <input type="text" name="Administrative_Duration" placeholder="Administrative_Duration" required="required" />
+           <input type="text" name="Informational" placeholder="Informational" required="required" />
+           <input type="text" name="Informational_Duration" placeholder="Informational_Duration" required="required" />
+           <input type="text" name="ProductRelated" placeholder="ProductRelated" required="required" />
+           <input type="text" name="ProductRelated_Duration" placeholder="ProductRelated_Duration" required="required" />
+           <br>
+           <br>
+           <input type="text" name="BounceRates" placeholder="BounceRates" required="required" />
+           <input type="text" name="ExitRates" placeholder="ExitRates" required="required" />
+           <input type="text" name="PageValues" placeholder="PageValues" required="required" />
+           <input type="text" name="SpecialDay" placeholder="SpecialDay" required="required" />
+           <input type="text" name="Month" placeholder="Month" required="required" />
+           <input type="text" name="OperatingSystems" placeholder="OperatingSystems" required="required" />
+   <br>
+   <br>
+
+           <input type="text" name="Browser" placeholder="Browser" required="required" />
+           <input type="text" name="Region" placeholder="Region" required="required" />
+           <input type="text" name="TrafficType" placeholder="TrafficType" required="required" />
+           <input type="text" name="VisitorType" placeholder="VisitorType" required="required" />
+           <input type="text" name="Weekend" placeholder="Weekend" required="required" />
+          
+           
+   <br>
+   <br>
+         <button class="button" type="submit">Predict</button>
+
+           
+       </form>
+       <br>
+   <br>
+   <center>
+    <h1>{{ prediction_text }}</h1>
+        </center>
+    </div>
+ 
+       
+
+
+</body>
+</html>

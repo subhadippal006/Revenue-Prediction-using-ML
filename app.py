@@ -26,6 +26,7 @@ def predict():
     else:
         res_val = "not be generated "
         
+        
 
     return render_template('predict.html', prediction_text='Revenue will  {}'.format(res_val))
 

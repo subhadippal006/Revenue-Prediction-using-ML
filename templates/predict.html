@@ -9,16 +9,21 @@
           }
           div {
   background-color: black;
-  width: 300px;
+  width: 650px;
   border: 2px solid black;
   padding: 40px;
-  margin-left: 700px;
+  margin:auto;
   margin-top: 40px;
   font-family: Arial, Helvetica, sans-serif;
   
 }
-       
 
+img {
+  display: block;
+  margin:auto;
+  
+  width: 40%;
+}
  
    .button {
   background-color:aqua;
@@ -32,21 +37,20 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-#txtcolor{
-  color:black;
-}
+
 label{
   color:white;
 }
-h1,h3{
+h2,h3{
   color:white;
-  
+  text-align: right;
   
 }
 form{
   color: black;
   text-align: right;
 }
+
 
    </style>
 
@@ -56,28 +60,34 @@ form{
 
 <body>
   
+  
     <br>
     
     <div style= "height: 400px; overflow-y: scroll;">
-       
       
+     
       
       <form action="{{ url_for('predict')}}"method="post">
-      <h1><b>REVENUE PREDICTION</b></h1>
+        
+      <h3><b>REVENUE PREDICTION</b> <img src="logo.png" alt="logo" width="300" height="250" style="float:left"></h3>
        <h3 >{{ prediction_text }}</h3>
-          <input type="text" name="Administrative" placeholder="Administrative" required="required" /><br><br>
-          <input type="text" name="Administrative_Duration" placeholder="Administrative_Duration" required="required" /><br><br>
-          <input type="text" name="Informational" placeholder="Informational" required="required" /><br><br>
-          <input type="text" name="Informational_Duration" placeholder="Informational_Duration" required="required" /><br><br>
-          <input type="text" name="ProductRelated" placeholder="ProductRelated" required="required" /><br><br>
-          <input type="text" name="ProductRelated_Duration" placeholder="ProductRelated_Duration" required="required" /><br><br>
+       
+  
+          <input type="text" size="25" name="Administrative" placeholder="Administrative" required="required" />
+        
+          <br><br>
+          <input type="text" size="25" name="Administrative_Duration" placeholder="Administrative_Duration" required="required" /><br><br>
+          <input type="text" size="25"name="Informational" placeholder="Informational" required="required" /><br><br>
+          <input type="text" size="25"name="Informational_Duration" placeholder="Informational_Duration" required="required" /><br><br>
+          <input type="text" size="25"name="ProductRelated" placeholder="ProductRelated" required="required" /><br><br>
+          <input type="text" size="25"name="ProductRelated_Duration" placeholder="ProductRelated_Duration" required="required" /><br><br>
           
-          <input type="text" name="BounceRates" placeholder="BounceRates" required="required" /><br><br>
-          <input type="text" name="ExitRates" placeholder="ExitRates" required="required" /><br><br>
-          <input type="text" name="PageValues" placeholder="PageValues" required="required" /><br><br>
-          <input type="text" name="SpecialDay" placeholder="SpecialDay" required="required" /><br><br>
+          <input type="text" size="25" name="BounceRates" placeholder="BounceRates" required="required" /><br><br>
+          <input type="text" size="25"name="ExitRates" placeholder="ExitRates" required="required" /><br><br>
+          <input type="text" size="25"name="PageValues" placeholder="PageValues" required="required" /><br><br>
+          <input type="text" size="25"name="SpecialDay" placeholder="SpecialDay" required="required" /><br><br>
           <label>Month</label>
-          <select name="Month">
+          <select name="Month" >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -93,14 +103,14 @@ form{
           </select>
           
           <br><br>
-          <input type="text" name="OperatingSystems" placeholder="OperatingSystems" required="required" /><br><br>
+          <input type="text" size="25" name="OperatingSystems" placeholder="OperatingSystems" required="required" /><br><br>
   
   
 
-          <input type="text" name="Browser" placeholder="Browser" required="required" /><br><br>
-          <input type="text" name="Region" placeholder="Region" required="required" /><br><br>
-          <input type="text" name="TrafficType" placeholder="TrafficType" required="required" /><br><br>
-          <input type="text" name="VisitorType" placeholder="VisitorType" required="required" /><br><br>
+          <input type="text" size="25" name="Browser" placeholder="Browser" required="required" /><br><br>
+          <input type="text" size="25"name="Region" placeholder="Region" required="required" /><br><br>
+          <input type="text" size="25"name="TrafficType" placeholder="TrafficType" required="required" /><br><br>
+          <input type="text" size="25"name="VisitorType" placeholder="VisitorType" required="required" /><br><br>
           <label>Weekend</label>
           <input type="radio" name="Weekend" value="0"/><label>0</label>
           <input type="radio" name="Weekend" value="1"/><label>1</label>
@@ -118,4 +128,5 @@ form{
  </div>
  
 </body>
+
 </html>

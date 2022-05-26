@@ -2,6 +2,11 @@
 <html>
     <head>
         <style>
+          body{
+            background-image:url('3.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
           div {
   background-color: black;
   width: 300px;
@@ -9,9 +14,10 @@
   padding: 40px;
   margin-left: 700px;
   margin-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
-           
-
+       
 
  
    .button {
@@ -29,8 +35,13 @@
 #txtcolor{
   color:black;
 }
-label,h1{
+label{
   color:white;
+}
+h1,h3{
+  color:white;
+  
+  
 }
 form{
   color: black;
@@ -44,72 +55,67 @@ form{
    
 
 <body>
-    
+  
     <br>
     
     <div style= "height: 400px; overflow-y: scroll;">
        
+      
+      
+      <form action="{{ url_for('predict')}}"method="post">
+      <h1><b>REVENUE PREDICTION</b></h1>
+       <h3 >{{ prediction_text }}</h3>
+          <input type="text" name="Administrative" placeholder="Administrative" required="required" /><br><br>
+          <input type="text" name="Administrative_Duration" placeholder="Administrative_Duration" required="required" /><br><br>
+          <input type="text" name="Informational" placeholder="Informational" required="required" /><br><br>
+          <input type="text" name="Informational_Duration" placeholder="Informational_Duration" required="required" /><br><br>
+          <input type="text" name="ProductRelated" placeholder="ProductRelated" required="required" /><br><br>
+          <input type="text" name="ProductRelated_Duration" placeholder="ProductRelated_Duration" required="required" /><br><br>
+          
+          <input type="text" name="BounceRates" placeholder="BounceRates" required="required" /><br><br>
+          <input type="text" name="ExitRates" placeholder="ExitRates" required="required" /><br><br>
+          <input type="text" name="PageValues" placeholder="PageValues" required="required" /><br><br>
+          <input type="text" name="SpecialDay" placeholder="SpecialDay" required="required" /><br><br>
+          <label>Month</label>
+          <select name="Month">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          
+          <br><br>
+          <input type="text" name="OperatingSystems" placeholder="OperatingSystems" required="required" /><br><br>
   
-      
-       <form action="{{ url_for('predict')}}"method="post">
-        <h1><i>Predict Revenue</i></h1>
-           <input type="text" name="Administrative" placeholder="Administrative" required="required" /><br><br>
-           <input type="text" name="Administrative_Duration" placeholder="Administrative_Duration" required="required" /><br><br>
-           <input type="text" name="Informational" placeholder="Informational" required="required" /><br><br>
-           <input type="text" name="Informational_Duration" placeholder="Informational_Duration" required="required" /><br><br>
-           <input type="text" name="ProductRelated" placeholder="ProductRelated" required="required" /><br><br>
-           <input type="text" name="ProductRelated_Duration" placeholder="ProductRelated_Duration" required="required" /><br><br>
-           
-           <input type="text" name="BounceRates" placeholder="BounceRates" required="required" /><br><br>
-           <input type="text" name="ExitRates" placeholder="ExitRates" required="required" /><br><br>
-           <input type="text" name="PageValues" placeholder="PageValues" required="required" /><br><br>
-           <input type="text" name="SpecialDay" placeholder="SpecialDay" required="required" /><br><br>
-           <label>Month</label>
-           <select name="Month">
-             <option value="1">1</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-             <option value="4">4</option>
-             <option value="5">5</option>
-             <option value="6">6</option>
-             <option value="7">7</option>
-             <option value="8">8</option>
-             <option value="9">9</option>
-             <option value="10">10</option>
-             <option value="11">11</option>
-             <option value="12">12</option>
-           </select>
-           
-           <br><br>
-           <input type="text" name="OperatingSystems" placeholder="OperatingSystems" required="required" /><br><br>
-   
+  
+
+          <input type="text" name="Browser" placeholder="Browser" required="required" /><br><br>
+          <input type="text" name="Region" placeholder="Region" required="required" /><br><br>
+          <input type="text" name="TrafficType" placeholder="TrafficType" required="required" /><br><br>
+          <input type="text" name="VisitorType" placeholder="VisitorType" required="required" /><br><br>
+          <label>Weekend</label>
+          <input type="radio" name="Weekend" value="0"/><label>0</label>
+          <input type="radio" name="Weekend" value="1"/><label>1</label>
+          <br><br>
+        <button class="button" type="submit">Predict</button>
+
+          
+      </form>
+      <br>
+  <br>
+  
+  
    
 
-           <input type="text" name="Browser" placeholder="Browser" required="required" /><br><br>
-           <input type="text" name="Region" placeholder="Region" required="required" /><br><br>
-           <input type="text" name="TrafficType" placeholder="TrafficType" required="required" /><br><br>
-           <input type="text" name="VisitorType" placeholder="VisitorType" required="required" /><br><br>
-           <label>Weekend</label>
-           <input type="radio" name="Weekend" value="0"/><label>0</label>
-           <input type="radio" name="Weekend" value="1"/><label>1</label>
-           <br><br>
-
-         
-           
-   <br>
-   <br>
-         <button class="button" type="submit">Predict</button>
-
-           
-       </form>
-       <br>
-   <br>
-   <form>
-    <h1>{{ prediction_text }}</h1>
-      
-  </form>
-       
-  </div>
-
+ </div>
+ 
 </body>
 </html>

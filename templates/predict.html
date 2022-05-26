@@ -9,6 +9,7 @@
           }
           div {
   background-color: black;
+
   width: 650px;
   border: 2px solid black;
   padding: 40px;
@@ -29,9 +30,10 @@ img {
   background-color:aqua;
   border: 1px solid black;
   color: black;
-  padding: 5px 15px;
+  padding: 5px 20px;
   text-align: center;
   text-decoration: none;
+  border-radius: 12px;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
@@ -52,6 +54,32 @@ form{
 }
 
 
+ul {
+  list-style-type: none;
+  margin-left:150px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:grey;
+}
+
    </style>
 
 
@@ -63,7 +91,7 @@ form{
   
     <br>
     
-    <div style= "height: 400px; overflow-y: scroll;">
+    <div style= "height: 450px; overflow-y: scroll;">
       
      
       
@@ -116,15 +144,18 @@ form{
           <input type="radio" name="Weekend" value="1"/><label>1</label>
           <br><br>
         <button class="button" type="submit">Predict</button>
+        
 
-          
+        
       </form>
       <br>
   <br>
-  
-  
-   
-
+  <ul>
+    <li><a class="active" href="predict.html">Predict</a></li>
+    <li><a href="Alliance">Alliance</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
  </div>
  
 </body>

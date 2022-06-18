@@ -3,13 +3,13 @@
     <head>
         <style>
           body{
-            background-image:url('3.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-color: palevioletred;
+       
+          
           }
           div {
-  background-color: black;
 
+background-color: black;
   width: 650px;
   border: 2px solid black;
   padding: 40px;
@@ -20,13 +20,7 @@
   
 }
 
-img {
-  display: block;
-  margin:auto;
-  
-  width: 40%;
-}
- 
+
    .button {
   background-color:aqua;
   border: 1px solid black;
@@ -53,7 +47,10 @@ form{
   color: black;
   text-align: right;
 }
+img {
+    float: left;
 
+}
 
 ul {
   list-style-type: none;
@@ -95,10 +92,9 @@ li a:hover {
     <div style= "height: 450px; overflow-y: scroll;">
       
      
-      
       <form action="{{ url_for('predict')}}"method="post">
         
-      <h3><b>REVENUE PREDICTION</b> <img src="logo.png" alt="logo" width="300" height="250" style="float:left"></h3>
+      <h3>REVENUE PREDICTION <img src="logo.png" height="200" weight="100"></h3>
        <h3 >{{ prediction_text }}</h3>
        
   

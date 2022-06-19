@@ -19,6 +19,18 @@ background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   
 }
+.leftdiv{
+         
+         float: left;
+         }
+        
+         div2{
+         padding : 1%;
+         color: white;
+         background-color: 009900;
+         width: 30%;
+         border: solid black;
+         }
 
 
    .button {
@@ -47,10 +59,7 @@ form{
   color: black;
   text-align: right;
 }
-img {
-    float: left;
 
-}
 
 ul {
   list-style-type: none;
@@ -86,15 +95,19 @@ li a:hover {
 
 <body>
   
+    
+    
   
     <br>
     
     <div style= "height: 450px; overflow-y: scroll;">
+ 
       
-     
+   
       <form action="{{ url_for('predict')}}"method="post">
         
-      <h3>REVENUE PREDICTION <img src="logo.png" height="200" weight="100"></h3>
+      <h3>REVENUE PREDICTION </h3>
+      <img src="{{user_image}}" alt="img" width="250" height="250" style="float:left">
        <h3 >{{ prediction_text }}</h3>
        
   
@@ -142,17 +155,17 @@ li a:hover {
           <br><br>
         <button class="button" type="submit">Predict</button>
         
-
-        
+    
       </form>
       <br>
-  <hr>
-  <ul>
-    <li><a class="active" href="predict.html">Predict</a></li>
-    <li><a href="Alliance">Alliance</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
+        <hr>
+        <ul>
+          <li><a href="/predict">Predict</a></li>
+          <li><a href="/Alliance">Alliance</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+        
  </div>
  
 </body>

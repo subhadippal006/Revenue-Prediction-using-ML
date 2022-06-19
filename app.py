@@ -42,9 +42,9 @@ def predict():
     else:
         res_val = "not be generated "
         
-        
+        full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'logo.png')
 
-    return render_template('predict.html', prediction_text='Revenue will  {}'.format(res_val))
+    return render_template('predict.html', prediction_text='Revenue will  {}'.format(res_val), user_image = full_filename)
 
 
 

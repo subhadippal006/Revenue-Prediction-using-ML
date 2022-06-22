@@ -26,6 +26,10 @@ def contact():
 @app.route('/about')
 def about():
     return render_template('about.html')
+@app.route('/predict')
+def pr():
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'logo.png')
+    return render_template('predict.html', user_image = full_filename)
 @app.route('/predict',methods=['POST'])
 def predict():
     input_features = [float(x) for x in request.form.values()]

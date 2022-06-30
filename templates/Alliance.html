@@ -105,16 +105,10 @@ li a:hover {
    
       <form action="{{ url_for('predict')}}"method="post">
         
-      <h3><center>SEND REQUEST</center></h3>
+      <h3><center>CREATE ALLIANCE</center></h3>
           <br><br>
           <center>
-           
-          <input type="text" name="sid" id = "sid" placeholder="Enter Sid" required />
-          <br><br><br>
-          <button class="button">Send Request</button>
-          <br><br>
-          <h3><center>VIEW REQUEST</center></h3>
-          <button class="button" type="submit">View Request</button>
+          <button class="button" onclick="document.location='social_network/login.php' " type="submit">CREATE</button>
           </center><br><br><br><br><br><br>
         <hr>
         <ul>

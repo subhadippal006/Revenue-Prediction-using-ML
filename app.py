@@ -6,16 +6,13 @@ import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('Models/model_pickle.pkl', 'rb'))
-PEOPLE_FOLDER = os.path.join('static', 'people_photo')
-app=Flask(__name__)
-app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
+
 
 
 
 @app.route('/')
 def home():
- full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'logo.png')
- return render_template("predict.html", user_image = full_filename)
+  return render_template("predict.html")
 
 @app.route('/Alliance')
 def Alliance():
@@ -43,9 +40,9 @@ def predict():
     else:
         res_val = "not be generated"
         
-        full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'logo.png')
+      
 
-    return render_template('predict.html', prediction_text='Revenue will  {}'.format(res_val), user_image = full_filename)
+    return render_template('predict.html', prediction_text='Revenue will  {}'.format(res_val))
 
 
 

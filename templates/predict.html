@@ -107,7 +107,7 @@ li a:hover {
         
       <h3>REVENUE PREDICTION </h3>
       <img src="{{user_image}}" alt="img" width="250" height="250" style="float:left">
-       <h3 >{{ prediction_text }}</h3>
+       <h3>{{ prediction_text }}</h3>
        
   
           <input type="text" size="25" name="Administrative" placeholder="Administrative" required="required" />
@@ -123,23 +123,9 @@ li a:hover {
           <input type="text" size="25"name="ExitRates" placeholder="ExitRates" required="required" /><br><br>
           <input type="text" size="25"name="PageValues" placeholder="PageValues" required="required" /><br><br>
           <input type="text" size="25"name="SpecialDay" placeholder="SpecialDay" required="required" /><br><br>
-          <label>Month</label>
-          <select name="Month" >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-          </select>
           
-          <br><br>
+          
+          <input type="text" size="25" name="Month" placeholder="Month" required="required" /><br><br>
           <input type="text" size="25" name="OperatingSystems" placeholder="OperatingSystems" required="required" /><br><br>
   
   
@@ -148,10 +134,7 @@ li a:hover {
           <input type="text" size="25"name="Region" placeholder="Region" required="required" /><br><br>
           <input type="text" size="25"name="TrafficType" placeholder="TrafficType" required="required" /><br><br>
           <input type="text" size="25"name="VisitorType" placeholder="VisitorType" required="required" /><br><br>
-          <label>Weekend</label>
-          <input type="radio" name="Weekend" value="0"/><label>0</label>
-          <input type="radio" name="Weekend" value="1"/><label>1</label>
-          <br><br>
+          <input type="text" size="25"name="Weekend" placeholder="Weekend" required="required" /><br><br>
         <button class="button" type="submit">Predict</button>
         
     
@@ -159,7 +142,7 @@ li a:hover {
       <br><br><br><br><br><br>
         <hr>
         <ul>
-          <li><a href="/predict">Predict</a></li>
+          <li><a href="/">Predict</a></li>
           <li><a href="/Alliance">Alliance</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/about">About</a></li>

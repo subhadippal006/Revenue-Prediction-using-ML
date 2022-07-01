@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          body{
+            background-color: silver;       
+          
+          }
+          div {
+
+background-color: black;
+  width: 650px;
+  border: 2px solid white;
+  padding: 40px;
+  margin:auto;
+  margin-top: 40px;
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.leftdiv{
+         
+         float: center;
+         }
+        
+         div2{
+         padding : 1%;
+         color: white;
+         background-color: 009900;
+         width: 30%;
+         border: solid black;
+         }
+
+
+   .button {
+  background-color:aqua;
+  border: 1px solid black;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+label{
+  color:white;
+}
+h2,h3{
+  color:white;
+  text-align: right;
+  
+}
+form{
+  color: black;
+  text-align: right;
+}
+
+
+ul {
+  list-style-type: none;
+  margin-left:150px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:grey;
+}
+
+   </style>
+
+
+    </head>
+   
+
+<body>
+  
+    
+    
+  
+    <br>
+    
+    <div style= "height: 450px;">
+ 
+      
+   
+      <form action="{{ url_for('predict')}}"method="post">
+        
+      <h3><center>ABOUT US<br><br><p>'BUY SMART' Revenue prediction using ML is the fourth product of the PBL batch 8 team .This project of ours helps the sellers to predict whether the product will generate revenue or not. We belive everyone deserves to have simple ,hassle-free ,easy to use, user friendly online store.Our goal is to remove any technical or financial barrier that can prevent difficulty in choosing products for the user and also recommend the right and secured products for our users.We also aim at providing the business owners to make desreved profits for their products,We are exacited to help you on your journey! <br><br> Brought to you by:<br>Subhadip Pal<br>Srujan R Bangera<br>Yajnesh R Kunder<br>Vikas<br></p></center></h3>
+          <center>
+            
+        </center>
+        <hr>
+        <ul>
+          <li><a href="/">Predict</a></li>
+          <li><a href="/Alliance">Alliance</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+        
+ </div>
+ 
+</body>
+
+</html>
